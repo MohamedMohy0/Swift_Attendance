@@ -1,0 +1,1 @@
+GRANT SELECT ON public.attendance_sessions TO authenticated;
