@@ -11,7 +11,7 @@ const querySchema = z.object({
 
 const OAUTH_BROKER_URL = "https://oauth.lovable.app/initiate";
 const PROJECT_ID = "f69d5027-242e-4de1-a25a-75880dbfcdd8";
-const PRODUCTION_REDIRECT_URI = "https://swift-attendance.vercel.app/dashboard";
+const PRODUCTION_REDIRECT_URI = "https://swift-attendance.vercel.app/auth";
 
 export const Route = createFileRoute("/~oauth/initiate")({
   server: {
