@@ -88,6 +88,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Swift Attendance" },
       { name: "twitter:title", content: "Swift Attendance" },
       { name: "twitter:description", content: "Smart Attendance Hub is a web application for secure, location-aware student attendance tracking." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/91a7c25f-3976-46fb-b7ab-95d7a12a61ab/id-preview-b940baee--f69d5027-242e-4de1-a25a-75880dbfcdd8.lovable.app-1781436482321.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/91a7c25f-3976-46fb-b7ab-95d7a12a61ab/id-preview-b940baee--f69d5027-242e-4de1-a25a-75880dbfcdd8.lovable.app-1781436482321.png" },
     ],
     links: [
       {
