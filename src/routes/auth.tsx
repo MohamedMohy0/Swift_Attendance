@@ -57,4 +57,4 @@ supabase.auth.signInWithOAuth({
       </Card>
     </div>
   );
-}
+
