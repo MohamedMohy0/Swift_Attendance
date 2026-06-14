@@ -27,15 +27,12 @@ function AuthPage() {
     });
   }, [navigate]);
 
-  async function signIn() {
-  setLoading(true);
-
-  const { data, error } = await supabase.auth.signInWithOAuth({
-    provider: "google",
-    options: {
-      redirectTo: window.location.origin + "/auth",
-    },
-  });
+supabase.auth.signInWithOAuth({
+  provider: "google",
+  options: {
+    redirectTo: window.location.origin + "/auth",
+  },
+});
 
   if (error) {
     toast.error(error.message ?? "Sign in failed");
