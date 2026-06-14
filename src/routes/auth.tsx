@@ -28,18 +28,20 @@ function AuthPage() {
   }, [navigate]);
 
   async function signIn() {
-    setLoading(true);
-    const result = await lovable.auth.signInWithOAuth("google", {
-redirect_uri: window.location.origin + "/auth?callback=true",    });
-    if (result.error) {
-      toast.error(result.error.message ?? "Sign in failed");
-      setLoading(false);
-      return;
-    }
-    if (!result.redirected) {
-      navigate({ to: "/dashboard", replace: true });
-    }
+  setLoading(true);
+
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider: "google",
+    options: {
+      redirectTo: window.location.origin + "/auth",
+    },
+  });
+
+  if (error) {
+    toast.error(error.message ?? "Sign in failed");
+    setLoading(false);
   }
+}
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background to-muted p-4">
